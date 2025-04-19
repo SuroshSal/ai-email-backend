@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+  }
+  
+  nav {
+    background: #111;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: #fff;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hero {
+    background: #0077ff;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+  }
+  
+  .cta-button {
+    background: #fff;
+    color: #0077ff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  .content, .pricing {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .plans {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .plan {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
