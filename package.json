@@ -1,9 +1,10 @@
 {
-    "name": "simple-node-website",
+    "name": "ai-email-frontend",
     "version": "1.0.0",
-    "main": "index.js",
+    "description": "Frontend for AI Email Assistant",
+    "main": "server.js",
     "scripts": {
-      "start": "node index.js"
+      "start": "node server.js"
     },
     "dependencies": {
       "express": "^4.18.2"

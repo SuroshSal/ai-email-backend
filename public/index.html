@@ -2,19 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Business Assistant</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: white;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+      font-size: 18px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 80vh;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+    .hero p {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+    .hero button {
+      background-color: white;
+      color: #0056b3;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .hero button:hover {
+      background-color: #e6e6e6;
+    }
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .pricing {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      color: #333;
+      border-radius: 12px;
+      padding: 30px;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    .card p {
+      font-size: 18px;
+    }
+  </style>
 </head>
 <body>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="pricing.html">Pricing</a>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#pricing">Pricing</a>
   </nav>
-  <header class="hero">
-    <h1>Supercharge Your Business with AI</h1>
-    <p>Your virtual assistant for professional emails, automation, and beyond.</p>
-    <a class="cta-button" href="pricing.html">View Plans</a>
-  </header>
-</body>
-</html>
+
+  <section class="hero">
+    <h1>AI Business Assistant</h1>
+    <p>Supercharge your business operations with AI solutions.</p>
+    <button>Get Started</button>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p>Our AI Assistant helps businesses streamline communication, automate workflows, and increase efficiency. From intelligent email responses to data-driven decision-making tools, our solutions are built to grow with your business.</p>
+  </section>
+
+  <section class="section" id="pricing">
+    <h2>Pricing Plans</h2>
+    <div class="pricing">
+      <div class="card">
+        <h3>Starter</h3>
+        <p>$9.99/mo</p>
+        <p>Basic AI support</p>
+      </div>
+      <div class="card">
+        <h3>Pro</h3>
+        <p>$29.99/mo</p>
+        <p>Advanced automation tools</p>
+      </div>
+      <div class="card">
+        <h3>Enterprise</h3>
+        <p>$99.99
