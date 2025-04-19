@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const OpenAI = require("openai");
+const { Configuration, OpenAIApi } = require("openai");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -9,15 +9,16 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-const openai = new OpenAI({
+const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
+const openai = new OpenAIApi(configuration);
 
 app.post("/generate", async (req, res) => {
   const userEmail = req.body.email;
 
   try {
-    const completion = await openai.chat.completions.create({
+    const completion = await openai.createChatCompletion({
       model: "gpt-4",
       messages: [
         { role: "system", content: "You are a professional email assistant." },
@@ -25,7 +26,7 @@ app.post("/generate", async (req, res) => {
       ],
     });
 
-    const reply = completion.choices[0].message.content;
+    const reply = completion.data.choices[0].message.content;
     res.json({ reply });
   } catch (error) {
     console.error("OpenAI error:", error.response?.data || error.message);
