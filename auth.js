@@ -36,3 +36,4 @@ app.get("/oauth2callback", async (req, res) => {
 app.listen(3000, () => {
   console.log("OAuth server running on port 3000");
 });
+require('dotenv').config();
